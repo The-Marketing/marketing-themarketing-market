@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" >
         <body className={cn(
-          "h-screen flex flex-col gap-24 items-center justify-center " ,`${inter.className} antialiased`,
+           `${inter.className} antialiased`,
           fontSans.variable
         )}>
 
@@ -36,14 +36,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-              <header className="flex flex-col gap-24 items-center justify-center">
-      <div className="tw-flex tw-items-center">
-        < Logo />
-        <h1 className="tw-text-2xl tw-font-bold">The Marketing</h1>
 
-      </div>
-    </header>
-            <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</main>
+            {children}
           </ThemeProvider>
         </body>
       </html>

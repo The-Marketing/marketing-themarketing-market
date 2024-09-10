@@ -38,13 +38,14 @@ input[type='number']::-webkit-outer-spin-button {
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
   }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -71,6 +72,65 @@ input[type='number']::-webkit-outer-spin-button {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+}
+/* styles/globals.css */
+.typing-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* styles/globals.css */
+
+.tilt {
+  /* Tamaño y forma del elemento */
+  width: 200px;
+  height: 200px;
+  background-color: #3498db; /* Color de fondo */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px; /* Bordes redondeados */
+
+  /* Sombra para mejorar el efecto visual */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  
+  /* Transición para suavizar el efecto */
+  transition: transform 0.3s ease;
+}
+
+/* Opcional: Puedes agregar un estilo diferente cuando el elemento esté siendo inclinado */
+.tilt:hover {
+  /* Estilo adicional al pasar el ratón sobre el elemento */
+  cursor: pointer;
+  transform: scale(1.05); /* Escalar el elemento ligeramente */
+}
+.typingText {
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap; /* Evita que el texto se ajuste a la línea */
+  overflow: hidden; /* Oculta el texto que se desplaza fuera del contenedor */
+  position: relative;
+  display: inline-block; /* Evita que el contenedor se expanda verticalmente */
+  width: 100%; /* Ajusta el ancho según el diseño de tu página */
+  height: 40px; /* Establece una altura fija o mínima según el contenido */
+  line-height: 40px; /* Alinea verticalmente el texto si es necesario */
+  box-sizing: border-box;
+}
+
+/* Agrega animación si deseas un efecto más suave al cambiar el texto */
+.typingText::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: inherit;
+  /* Puedes agregar efectos adicionales aquí si lo deseas */
 }
 
 @layer base {

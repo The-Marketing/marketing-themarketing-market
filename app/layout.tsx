@@ -4,8 +4,7 @@ import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 
 import { inter } from '@/components/fonts/fonts';
-import Logo from '@/components/logo';
-import { ThemeProvider } from '@/components/theme-provider';
+import Providers from '@/components/provider';
 import { cn } from '@/lib/utils';
 
 const fontSans = FontSans({
@@ -24,22 +23,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <Providers>
+
     <html lang="pt-BR" >
         <body className={cn(
            `${inter.className} antialiased`,
           fontSans.variable
         )}>
 
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
 
             {children}
-          </ThemeProvider>
         </body>
       </html>
+      </Providers>
+
   );
 }

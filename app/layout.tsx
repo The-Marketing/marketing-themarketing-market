@@ -23,19 +23,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <Providers>
-
+   
     <html lang="pt-BR" >
         <body className={cn(
            `${inter.className} antialiased`,
           fontSans.variable
-        )}>
+        )}> <Providers
+    
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange>
+    
 
 
             {children}
+            </Providers>
+
         </body>
       </html>
-      </Providers>
 
   );
 }

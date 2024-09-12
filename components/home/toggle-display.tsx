@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-import { Separator } from '@/components/ui/separator';
+import { Separator } from '../ui/separator';
 
 export function ToggleDisplay() {
   const { setTheme } = useTheme()

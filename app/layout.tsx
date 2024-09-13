@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 
 import { inter } from '@/components/fonts/fonts';
-import Providers from '@/components/provider';
+import ThemeProvider from '@/components/provider';
 import { cn } from '@/lib/utils';
+import Logo from '@/components/logo';
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -24,24 +25,25 @@ export default function RootLayout({
 }) {
   return (
    
-    <html lang="pt-BR" >
-        <body className={cn(
-           `${inter.className} antialiased`,
-          fontSans.variable
-        )}> <Providers
-    
-        attribute="class"
-        defaultTheme="system"
-        enableSystem
-        disableTransitionOnChange>
-    
+    <html lang="pt-BR" suppressHydrationWarning>
+    <body className={cn(
+      "h-screen flex flex-col gap-24 items-center justify-center",
+      fontSans.variable
+    )}>
 
+      <ThemeProvider>
+        
+          <header className="flex flex-col gap-24 items-center justify-center">
+  <div className="tw-flex tw-items-center">
+    < Logo />
+    <h1 className="tw-text-2xl tw-font-bold">The Marketing</h1>
 
-            {children}
-            </Providers>
-
-        </body>
-      </html>
+  </div>
+</header>
+        <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</main>
+      </ThemeProvider>
+    </body>
+  </html>
 
   );
 }

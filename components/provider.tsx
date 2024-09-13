@@ -8,7 +8,10 @@ export default function Providers({ children }: { children: React.ReactNode }) {
   const { theme } = useTheme();
 
   return (
-    <ThemeProvider attribute="class" defaultTheme={theme} enableSystem>
+    <ThemeProvider    defaultTheme="dark" 
+    enableSystem={true} 
+    disableTransitionOnChange={true}
+    attribute="class">
       <TooltipProvider>
         {children}
       </TooltipProvider>

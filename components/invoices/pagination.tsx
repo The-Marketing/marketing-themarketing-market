@@ -1,18 +1,21 @@
 'use client';
 
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import Link from 'next/link';
-import { generatePagination } from '@/app/lib/utils';
+
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+} from '@heroicons/react/24/outline';
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
-  // NOTE: Uncomment this code in Chapter 11
+  // NOTE: comment in this code when you get to this point in the course
 
   // const allPages = generatePagination(currentPage, totalPages);
 
   return (
     <>
-      {/*  NOTE: Uncomment this code in Chapter 11 */}
+      {/* NOTE: comment in this code when you get to this point in the course */}
 
       {/* <div className="inline-flex">
         <PaginationArrow

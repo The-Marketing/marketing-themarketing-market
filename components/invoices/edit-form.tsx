@@ -1,14 +1,18 @@
 'use client';
 
-import { CustomerField, InvoiceForm } from '@/app/lib/definitions';
+import Link from 'next/link';
+
+import { Button } from '@/components/ui/variants/button';
+import {
+  CustomerField,
+  InvoiceForm,
+} from '@/lib/definitions';
 import {
   CheckIcon,
   ClockIcon,
   CurrencyDollarIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
-import Link from 'next/link';
-import { Button } from '@/app/ui/button';
 
 export default function EditInvoiceForm({
   invoice,

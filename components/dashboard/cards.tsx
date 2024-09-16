@@ -1,10 +1,10 @@
+import { lusitana } from '@/components/ui/variants/fonts';
 import {
   BanknotesIcon,
   ClockIcon,
-  UserGroupIcon,
   InboxIcon,
+  UserGroupIcon,
 } from '@heroicons/react/24/outline';
-import { lusitana } from '@/app/ui/fonts';
 
 const iconMap = {
   collected: BanknotesIcon,
@@ -16,7 +16,7 @@ const iconMap = {
 export default async function CardWrapper() {
   return (
     <>
-      {/* NOTE: Uncomment this code in Chapter 9 */}
+      {/* NOTE: comment in this code when you get to this point in the course */}
 
       {/* <Card title="Collected" value={totalPaidInvoices} type="collected" />
       <Card title="Pending" value={totalPendingInvoices} type="pending" />

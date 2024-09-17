@@ -6,7 +6,6 @@ import Script from 'next/script';
 import { Toaster } from 'sonner';
 
 import { cn } from '@/lib/utils';
-import { Analytics } from '@vercel/analytics/react';
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -34,7 +33,6 @@ export default function RootLayout({
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable)}>{children}</body>
           <Toaster richColors />
-      <Analytics />
     </html>
   );
 }

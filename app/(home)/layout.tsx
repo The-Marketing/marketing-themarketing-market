@@ -3,7 +3,8 @@ import MobileNav from '@/components/home/navbar/mobile-nav';
 import { User } from '@/components/home/navbar/user';
 import Providers from '@/components/home/providers.';
 import { SearchInput } from '@/components/home/search/search';
-import { Analytics } from '@vercel/analytics/react';
+
+// import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'IA Conteúdo Digital  | ®TM',
@@ -34,7 +35,7 @@ export default function HomeLayout({
             {children}
           </main>
         </div>
-        <Analytics />
+        {/* <Analytics /> */}
       </main>
     </Providers>
     </>
